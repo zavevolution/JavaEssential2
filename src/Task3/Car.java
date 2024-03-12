@@ -17,5 +17,33 @@ public class Car {
         color = "";
     }
 
+    public Car(int year) {
+        this.year = year;
+        speed = 0.0;
+        weight = 0;
+        color = "";
+    }
+
+    public Car(int year, double speed) {
+        this.year = year;
+        this.speed = speed;
+        weight = 0;
+        color = "";
+    }
+
+    public Car(int year, double speed, int weight) {
+        this.year = year;
+        this.speed = speed;
+        this.weight = weight;
+        color = "";
+    }
+
+    public Car(int year, double speed, int weight, String color) {
+        this.year = year;
+        this.speed = speed;
+        this.weight = weight;
+        this.color = color;
+    }
+
 
 }
