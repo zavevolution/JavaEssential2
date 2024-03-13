@@ -1,4 +1,4 @@
-package Task2;
+package dz2.Task2.Task2;
 
 // Використовуючи Intelij IDEA, створити проект, пакет.
 // Створити клас Машина з полями рік(int), колір(String).
