@@ -1,6 +1,7 @@
 package dz3.task2;
 
 public class Pupil {
+
     void study() {
         System.out.println("Метод study() класу Pupil.");
     }
@@ -15,9 +16,11 @@ public class Pupil {
     }
 
     void show() {
+        System.out.println("Pupil:");
         study();
         read();
         write();
         relax();
+        System.out.println();
     }
 }
