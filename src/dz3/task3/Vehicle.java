@@ -6,4 +6,6 @@ public class Vehicle {
     double price;
     int speed;
     int yearOfProduced;
+
+
 }
