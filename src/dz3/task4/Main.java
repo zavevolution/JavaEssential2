@@ -12,7 +12,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String key = "";
         System.out.print("Введіть ключ продукту якщо у вас є: ");
-        System.out.println();
+
         key = in.next();
 
         if (key.equals(PRO_KEY)) {
@@ -22,6 +22,7 @@ public class Main {
         } else {
             doc = new DocumentWorker();
         }
+        System.out.println();
 
         doc.openDocument();
         doc.editDocument();
