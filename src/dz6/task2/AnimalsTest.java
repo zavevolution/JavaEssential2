@@ -19,16 +19,15 @@ enum Animals {
 
     @Override
     public String toString() {
-        return "Animals{" +
-                name() +
-                " age=" + age +
-                '}';
+        return "Звір: " +
+                name() + " -> вік " +
+                age;
     }
 }
 
 public class AnimalsTest {
     public static void main(String[] args) {
-        Animals animals = Animals.Cow;
+        Animals animals = Animals.Dog;
         System.out.println(animals);
     }
 }
