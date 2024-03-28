@@ -63,6 +63,5 @@ public class Program {
             ar[count] = new Price(productName, storyName, price);
             count++;
         } while (count < 2);
-        in.close();
     }
 }
