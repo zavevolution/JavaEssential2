@@ -2,6 +2,8 @@ package dz8.task2;
 
 import dz8.task2.Device;
 
+import java.util.Objects;
+
 public class EthernetAdapter extends Device {
     int speed;
     String mac;
@@ -33,5 +35,18 @@ public class EthernetAdapter extends Device {
         return super.toString() +
                 ", speed=" + speed +
                 ", mac=" + mac;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof EthernetAdapter that)) return false;
+        if (!super.equals(o)) return false;
+        return getSpeed() == that.getSpeed() && Objects.equals(getMac(), that.getMac());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getSpeed(), getMac());
     }
 }

@@ -2,6 +2,8 @@ package dz8.task2;
 
 import dz8.task2.Device;
 
+import java.util.Objects;
+
 public class Monitor extends Device {
     int resolutionX;
     int resolutionY;
@@ -34,5 +36,18 @@ public class Monitor extends Device {
         return super.toString() +
                 ", X=" + resolutionX +
                 ", Y=" + resolutionY;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Monitor monitor)) return false;
+        if (!super.equals(o)) return false;
+        return getResolutionX() == monitor.getResolutionX() && getResolutionY() == monitor.getResolutionY();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getResolutionX(), getResolutionY());
     }
 }

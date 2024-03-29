@@ -1,5 +1,7 @@
 package dz8.task2;
 
+import java.util.Objects;
+
 public class Device {
     String manufacturer;
     float price;
@@ -41,5 +43,18 @@ public class Device {
                 " manufacturer=" + manufacturer +
                 ", price=" + price +
                 ", serialNumber=" + serialNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Device device = (Device) o;
+        return Float.compare(getPrice(), device.getPrice()) == 0 && Objects.equals(getManufacturer(), device.getManufacturer()) && Objects.equals(getSerialNumber(), device.getSerialNumber());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getManufacturer(), getPrice(), getSerialNumber());
     }
 }
